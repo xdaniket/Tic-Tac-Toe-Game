@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.6/dist/sweetalert2.all.min.js"></script>
+  </head>
+  <body>
+    <!-- Adding Video On Background -->
+
+    <video class="videeo" autoplay muted loop style="pointer-events: none">
+      <source src="./Assets/media/back.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Game Start Area -->
+
+    <div id="popup" class="visibles">
+      <div id="title">
+        <h1 class="gameTitle">Tic Tac Toe</h1>
+        <hr />
+      </div>
+      <div class="input">
+        <input
+          autocomplete="off"
+          type="text"
+          placeholder="Enter the name of player-1"
+          id="playerXName"
+        />
+        <input
+          autocomplete="off"
+          style="margin-left: 8px; margin-right: 8px"
+          type="text"
+          placeholder="Enter the name of player-2"
+          id="playerOName"
+        />
+
+        <button id="submit-name">Play Now</button>
+      </div>
+    </div>
+
+    <!-- Game Container -->
+
+    <div class="hidden" id="gameContainer">
+
+      <!-- Header -->
+      
+      <div class="heading">
+        <h1 class="glow">Tic Tac Toe</h1>
+      </div>
+
+      <!-- Grid Container -->
+
+      <div class="container">
+        <div id="board">
+          <div data-index="1" class="tile right-border bottom-border"></div>
+          <div data-index="2" class="tile right-border bottom-border"></div>
+          <div data-index="3" class="tile bottom-border"></div>
+          <div data-index="4" class="tile right-border bottom-border"></div>
+          <div data-index="5" class="tile right-border bottom-border"></div>
+          <div data-index="6" class="tile bottom-border"></div>
+          <div data-index="7" class="tile right-border"></div>
+          <div data-index="8" class="tile right-border"></div>
+          <div data-index="9" class="tile"></div>
+          <div id="strike" class="strike"></div>
+        </div>
+
+        <!-- Right Block Player Information -->
+
+        <div class="right">
+          <div class="game-info">
+            <button id="reset" class="reset-button">
+              <span class="span-text"></span>RESET
+            </button>
+
+            <!-- background Sound -->
+
+            <button id="myBtn">Play</button>
+          </div>
+          <div id="info" class="playerDiv">
+            <button class="buttons" id="info1"></button>
+            <button class="buttons" id="info2"></button>
+          </div>
+          <div class="imgBox">
+            <img
+              style="z-index: 1"
+              class="imagee"
+              src="https://media.tenor.com/DhFPo_LQGt4AAAAi/alice-sticker-alice-animated.gif"
+              alt="Excited-Image"
+            />
+            <img
+              style="z-index: 1"
+              class="imagee1"
+              src="https://media.tenor.com/Hbm5ksVowZsAAAAM/referee-%E5%B9%B3%E6%89%8B.gif"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Over Area -->
+
+      <div id="game-over-area" class="hidden">
+        <h2 id="game-over-text">Winner is X</h2>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./Assets/javascript/script.js"></script>
