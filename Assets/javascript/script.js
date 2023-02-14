@@ -2,7 +2,7 @@ const tiles = document.querySelectorAll(".tile");
 const PLAYER_X = "X";
 const PLAYER_O = "O";
 let turn = PLAYER_X;
-let backGroundSound = new Audio("../Assets/media/background.mp3");
+let backGroundSound = new Audio("Assets/media/background.mp3");
 let targetBtn = document.getElementById("myBtn");
 
 let gameContainer = document.getElementById(`gameContainer`);
@@ -65,9 +65,9 @@ resetButton.addEventListener("click", () => startNewGame());
 
 // Sounds :
 
-const gameOverSound = new Audio("../Assets/media/win.mp3");
-const clickSound = new Audio("../Assets/media/ting.mp3");
-const tieSound = new Audio("../Assets/media/tie.mp3");
+const gameOverSound = new Audio("Assets/media/win.mp3");
+const clickSound = new Audio("Assets/media/ting.mp3");
+const tieSound = new Audio("Assets/media/tie.mp3");
 
 tiles.forEach((tile) => tile.addEventListener("click", tileClick));
 
